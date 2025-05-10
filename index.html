@@ -1,62 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scott Bouknight Music Lessons</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding-top: 100px;
-            background: linear-gradient(135deg, #fdf6e3 0%, #fceec0 50%, #ffffff 100%);
-            color: #333;
-            opacity: 0;
-            transition: opacity 1.5s ease;
-            min-height: 100vh;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scott Bouknight Music Lessons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding-top: 100px;
+      min-height: 100vh;
+      color: #333;
+      opacity: 0;
+      transition: opacity 1.5s ease;
 
-        body.fade-in {
-            opacity: 1;
-        }
+      /* Animated gradient background */
+      background: linear-gradient(135deg, #fdf6e3, #fceec0, #ffffff);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
 
-        h1 {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
-        .links {
-            margin-top: 20px;
-        }
+    body.fade-in {
+      opacity: 1;
+    }
 
-        .links a {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 18px;
-            text-decoration: none;
-            color: #2a7ae2;
-        }
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
 
-        .links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .links {
+      margin-top: 20px;
+    }
+
+    .links a {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #2a7ae2;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+      transform: scale(1.05);
+      color: #1a5ecc;
+    }
+  </style>
 </head>
 <body>
-    <h1>Scott Bouknight Lessons</h1>
+  <h1>Scott Bouknight Lessons</h1>
 
-    <div class="links">
-        <a href="#">About Me</a>
-        <a href="#">FAQ</a>
-        <a href="#">Sign Up</a>
-    </div>
+  <div class="links">
+    <a href="#">About Me</a>
+    <a href="#">FAQ</a>
+    <a href="#">Sign Up</a>
+  </div>
 
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            document.body.classList.add('fade-in');
-        });
-    </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+  </script>
 </body>
 </html>
