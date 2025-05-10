@@ -14,14 +14,15 @@
             <li><a href="signup.html">Sign Up</a></li>
         </ul>
     </nav>
+
     <h1>Sign Up for a Lesson</h1>
 
-    <p>Call or text to inquire: <strong>803-834-2287</strong></p>
+    <p>Call or text me to inquire: <strong>803-834-2287</strong></p>
 
     <form>
         <label>Name:<br><input type="text" required></label><br><br>
         <label>Email:<br><input type="email" required></label><br><br>
-        <label>Message:<br><textarea rows="5"></textarea></label><br><br>
+        <label>Message:<br><textarea rows="5" required></textarea></label><br><br>
         <button type="submit">Send</button>
     </form>
 
@@ -36,5 +37,11 @@
             <td>2–5pm</td><td>4–7pm</td><td>10am–2pm</td>
         </tr>
     </table>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('fade-in');
+        });
+    </script>
 </body>
 </html>
