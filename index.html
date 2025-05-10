@@ -8,28 +8,65 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 100px; 
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #fdf6e3, #ffffff);
+            color: #333;
+            opacity: 0;
+            transition: opacity 1.5s ease;
         }
+
+        body.fade-in {
+            opacity: 1;
+        }
+
+        .container {
+            margin: 100px auto;
+            padding: 40px 20px;
+            max-width: 600px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
         h1 {
             font-size: 36px;
             font-weight: bold;
+            margin-bottom: 20px;
         }
+
         .links {
             margin-top: 20px;
         }
+
         .links a {
             display: block;
             margin-bottom: 10px;
             font-size: 18px;
             text-decoration: none;
-            color: blue;
+            color: #2a7ae2;
         }
+
         .links a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Scott Bouknight Lessons</h1>
+    <div class="container">
+        <h1>Scott Bouknight Lessons</h1>
+
+        <div class="links">
+            <a href="#">Lesson Info</a>
+            <a href="#">Contact</a>
+            <a href="#">About Scott</a>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('fade-in');
+        });
+    </script>
 </body>
 </html>
