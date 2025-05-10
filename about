@@ -1,0 +1,60 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Scott Bouknight</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <style>
+    /* Same common styles as index.html */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(to bottom, #a9746e, #f0ece2);
+      color: #333;
+      min-height: 100vh;
+      animation: fadeIn 2s ease 0s 1 forwards;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    header, nav { text-align: center; }
+    .container { max-width: 800px; margin: auto; padding: 20px; }
+    h1, h2 { color: #fff; margin-bottom: 0.2em; }
+    nav ul { list-style: none; padding: 0; margin: 20px 0; display: flex; justify-content: center; }
+    nav li { margin: 0 15px; }
+    nav a { position: relative; color: #fff; text-decoration: none; font-weight: bold; transition: transform 0.2s ease; }
+    nav a:hover { transform: scale(1.1); }
+    nav a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      bottom: -4px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+    }
+    nav a:hover::before { transform: scaleX(1); }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <h1>About Me</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="signup.html">Sign-Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <p>
+      Scott Bouknight has been a passionate music teacher for over 15 years. He holds a degree in music education and has taught students of all ages. Scott believes in personalized instruction, helping each student find joy in learning an instrument. He offers lessons in piano, guitar, and voice, tailored to the student’s goals and skill level.
+    </p>
+  </main>
+</body>
+</html>
