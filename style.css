@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding-top: 100px;
+    background: linear-gradient(135deg, #c7a17a, #fdf6e3, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+    color: #333;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    min-height: 100vh;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #2a7ae2;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #2a7ae2;
+    transition: width 0.4s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.links a {
+    display: block;
+    margin: 20px 0;
+    font-size: 18px;
+    text-decoration: none;
+    color: #2a7ae2;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.testimonial footer {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.about-content {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto 40px auto;
+    text-align: left;
+}
+
+table.calendar {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table.calendar th,
+table.calendar td {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+}
+
+table.calendar td:hover {
+    background-color: #f7e5d1;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-pic {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+}
