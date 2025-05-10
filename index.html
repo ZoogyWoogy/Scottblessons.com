@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scott Bouknight - Music Lessons</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   <style>
@@ -26,20 +25,16 @@
 
     /* Headings and Navigation */
     h1, h2 { color: #fff; margin-bottom: 0.2em; }
-    nav ul { list-style: none; padding: 0; margin: 20px 0; display: flex; flex-wrap: wrap; justify-content: center; }
+    nav ul { list-style: none; padding: 0; margin: 20px 0; display: flex; justify-content: center; }
     nav li { margin: 0 15px; }
     nav a {
       position: relative;
       color: #fff;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.2rem;
-      padding: 10px 20px;
-      background-color: #333;
-      border-radius: 5px;
-      transition: transform 0.2s ease, background-color 0.3s ease;
+      transition: transform 0.2s ease;
     }
-    nav a:hover { transform: scale(1.1); background-color: #a9746e; }
+    nav a:hover { transform: scale(1.1); }
     nav a::before {
       content: "";
       position: absolute;
@@ -53,33 +48,6 @@
       transition: transform 0.3s ease;
     }
     nav a:hover::before { transform: scaleX(1); }
-
-    /* Mobile Optimization */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-      h2 {
-        font-size: 1.2rem;
-      }
-      nav a {
-        font-size: 1rem;
-        padding: 8px 16px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      h2 {
-        font-size: 1rem;
-      }
-      nav a {
-        font-size: 0.9rem;
-        padding: 6px 12px;
-      }
-    }
   </style>
 </head>
 <body>
